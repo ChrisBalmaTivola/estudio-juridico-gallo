@@ -458,13 +458,11 @@ h2{
 /* MOBILE/TABLET: fondo gris CLARO (sin gradientes) */
 @media (max-width: 920px){
   body{
-    background: #d6dbe3 !important;   /* gris claro */
+    background: #eef1f5 !important;
   }
 }
 
 
 
-/* DEBUG-STYLE-LOADED */
-.topbar{ background: #ff00ff !important; }
 
 
