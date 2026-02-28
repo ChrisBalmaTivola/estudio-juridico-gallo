@@ -438,27 +438,22 @@ h2{
 /* Responsive */
 /* Responsive + fondo mobile igual al desktop (solo más claro) */
 @media (max-width: 920px){
+
+  /* Responsive layout (tu mismo layout mobile) */
   .hero__inner{ grid-template-columns: 1fr; }
   .grid{ grid-template-columns: repeat(2, 1fr); }
   .contactGrid{ grid-template-columns: 1fr; }
   .kv{ grid-template-columns: 92px 1fr; }
   .nav{ display:none; }
 
-  /* ✅ mismo fondo que desktop, pero aclarado (sin volverse azul) */
-  :root{
-    --bg0: #2f3a4b;   /* antes #232c3a */
-    --bg1: #3a475b;   /* antes #2c384a */
-  }
-
-  /* opcional: un poquito más de luz en mobile */
+  /* Fondo SOLO para mobile/tablet (gris azulado claro, no marino) */
   body{
     background:
-      radial-gradient(520px 420px at 12% 10%, rgba(191,199,212,.22), transparent 62%),
-      radial-gradient(520px 420px at 88% 0%, rgba(138,150,170,.18), transparent 60%),
-      radial-gradient(520px 420px at 86% 92%, rgba(191,199,212,.14), transparent 58%),
-      linear-gradient(180deg, var(--bg1) 0%, var(--bg0) 55%, var(--bg1) 100%);
+      radial-gradient(900px 650px at 12% 10%, rgba(191,199,212,.20), transparent 60%),
+      radial-gradient(850px 650px at 88% 0%, rgba(138,150,170,.16), transparent 58%),
+      radial-gradient(750px 560px at 86% 92%, rgba(191,199,212,.12), transparent 56%),
+      linear-gradient(180deg, #566b86 0%, #42556f 55%, #566b86 100%) !important;
   }
 }
 
-/* DEBUG-STYLE-LOADED */
-.topbar{ background: #ff00ff !important; }
+
