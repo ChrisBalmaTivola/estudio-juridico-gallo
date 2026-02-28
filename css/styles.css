@@ -457,15 +457,11 @@ h2{
 }
 @media (max-width: 920px){
   body{
-    /* gris azulado claro como tu muestra */
-    background-color: #596a82 !important;
+    background-color: #a8b7c9 !important;
     background-image: none !important;
   }
 }
 
 
-
-/* DEBUG-STYLE-LOADED */
-.topbar{ background: #ff00ff !important; }
 
 
