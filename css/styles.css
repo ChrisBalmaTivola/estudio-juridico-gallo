@@ -455,14 +455,17 @@ h2{
       linear-gradient(180deg, #566b86 0%, #42556f 55%, #566b86 100%) !important;
   }
 }
-/* MOBILE/TABLET: fondo gris CLARO (sin gradientes) */
 @media (max-width: 920px){
   body{
-    background: #eef1f5 !important;
+    /* gris azulado claro como tu muestra */
+    background-color: #596a82 !important;
+    background-image: none !important;
   }
 }
 
 
 
+/* DEBUG-STYLE-LOADED */
+.topbar{ background: #ff00ff !important; }
 
 
