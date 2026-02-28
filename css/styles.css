@@ -449,3 +449,6 @@ h2{
     background-image: none !important;
   }
 }
+
+/* DEBUG-STYLE-LOADED */
+.topbar{ background: #ff00ff !important; }
