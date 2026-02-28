@@ -7,9 +7,9 @@
   /* Grises + acento frío (nada colorinche) */
   --bg0: #232c3a;
   --bg1: #2c384a;
-  --panel: rgba(255,255,255,.14);
-  --panel2: rgba(255,255,255,.20);
-  --border: rgba(255,255,255,.22);
+  --panel: rgba(0,0,0,.38);
+  --panel2: rgba(0,0,0,.50);
+  --border: rgba(255,255,255,.12);
 
   --ink: rgba(255,255,255,.92);
   --muted: rgba(255,255,255,.70);
@@ -263,7 +263,7 @@ h2{
 }
 
 .card{
-  background: linear-gradient(180deg, rgba(255,255,255,.20), rgba(255,255,255,.12));
+  background: linear-gradient(180deg, var(--panel2), var(--panel));
   border: 1px solid rgba(255,255,255,.22);
   border-radius: var(--radius);
   padding: 18px;
@@ -294,8 +294,8 @@ h2{
 
 /* IMPORTANTE: anulamos highlight “dorado” para que no haya una card distinta */
 .card--highlight{
-  border-color: rgba(255,255,255,.10);
-  background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.05));
+  background: linear-gradient(180deg, var(--panel2), var(--panel)) !important;
+  border-color: rgba(255,255,255,.12) !important;
 }
 
 /* =========================
@@ -308,7 +308,7 @@ h2{
   overflow: hidden;
   box-shadow: var(--shadow);
 }
-.mapWrap iframe{ width:100%; height:360px; border:0; filter: grayscale(1) contrast(1.05) brightness(.95); }
+.mapWrap iframe{ width:100%; height:360px; border:0; filter: none !important; }
 
 /* =========================
    Contacto (si existe)
@@ -321,8 +321,8 @@ h2{
 
 .contactBtn{
   display:block;
-  border: 1px solid rgba(255,255,255,.10);
-  background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.05));
+  background: linear-gradient(180deg, rgba(0,0,0,.28), rgba(0,0,0,.18)) !important;
+  border-color: rgba(255,255,255,.12) !important;
   border-radius: var(--radius);
   padding: 16px;
   transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease, background .12s ease;
@@ -341,23 +341,62 @@ h2{
 .contactBtn:hover{
   transform: translateY(-2px);
   border-color: rgba(255,255,255,.18);
-  background: linear-gradient(180deg, rgba(255,255,255,.085), rgba(255,255,255,.06));
+  background: linear-gradient(180deg, rgba(0,0,0,.28), rgba(0,0,0,.18)) !important;
   box-shadow: 0 18px 40px rgba(0,0,0,.44);
 }
 .contactBtn__title{ font-weight: 900; margin-bottom: 6px; }
 .contactBtn__value{ color: var(--muted); font-size: 14px; }
 
 /* Footer */
+/* =========================
+   ZÓCALO SIMPLE (barra)
+   ========================= */
+
+/* el footer como sección */
+/* =========================
+   ZÓCALO SIMPLE (barra prolija)
+   ========================= */
+
 .footer{
-  margin-top: 22px;
-  border-top: 1px solid rgba(255,255,255,.08);
-  padding-top: 16px;
-  display:flex;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
+  /* la barra */
+  width: 100%;
+  background: rgba(0,0,0,.26) !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 14px 30px rgba(0,0,0,.28) !important;
+
+  /* ✅ el “espacio a los costados” (adentro de la barra) */
+  padding: 18px 22px !important;
+
+  /* separación del bloque de contacto */
+  margin-top: 16px !important;
+
+  /* layout */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  flex-wrap: wrap !important;
 }
-.footer__muted{ color: var(--muted); }
+
+/* texto */
+.footer > div{
+  margin: 0 !important;
+}
+
+/* en mobile, que quede uno abajo del otro prolijo */
+@media (max-width: 520px){
+  .footer{
+    padding: 16px 18px !important;
+  }
+}
+
+/* texto */
+.footerBar span,
+.footerBar div{
+  color: rgba(255,255,255,.86);
+  font-size: 14px;
+}
 
 /* Floating buttons (derecha) — sobrios en gris/plata */
 .floating{
@@ -373,9 +412,9 @@ h2{
 .fab{
   padding: 10px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.06);
-  color: rgba(255,255,255,.92);
+  background: linear-gradient(180deg, var(--panel2), var(--panel)) !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  color: rgba(255,255,255,.92) !important;
   box-shadow: var(--shadow2);
   font-size: 13px;
   font-weight: 900;
@@ -384,8 +423,8 @@ h2{
 }
 .fab:hover{
   transform: translateY(-1px);
-  background: rgba(255,255,255,.09);
-  border-color: rgba(255,255,255,.20);
+  background: linear-gradient(180deg, rgba(0,0,0,.52), rgba(0,0,0,.40)) !important;
+  border-color: rgba(255,255,255,.18) !important;
   box-shadow: 0 16px 34px rgba(0,0,0,.44);
 }
 
