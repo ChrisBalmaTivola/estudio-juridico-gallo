@@ -445,10 +445,14 @@ h2{
   .nav{ display:none; }
 
   body{
-    background: #ffffff !important;
-    background-image: none !important;
-  }
+	  background-color: #415269 !important;
+	  background-image:
+		radial-gradient(520px 420px at 18% 12%, rgba(255,255,255,.18), transparent 62%),
+		radial-gradient(520px 420px at 82% 6%, rgba(255,255,255,.12), transparent 60%),
+		radial-gradient(520px 420px at 80% 92%, rgba(255,255,255,.08), transparent 58%),
+		linear-gradient(180deg, #415269 0%, #2f3d52 55%, #415269 100%) !important;
+	  background-repeat: no-repeat !important;
+	}
 }
 
-/* DEBUG-STYLE-LOADED */
-.topbar{ background: #ff00ff !important; }
+
