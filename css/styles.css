@@ -444,14 +444,8 @@ h2{
   .kv{ grid-template-columns: 92px 1fr; }
   .nav{ display:none; }
 
-  /* fondo más claro (solo el fondo) */
   body{
     background: #ffffff !important;
-    background-image:
-      radial-gradient(520px 420px at 18% 12%, rgba(255,255,255,.22), transparent 62%),
-      radial-gradient(520px 420px at 82% 6%, rgba(255,255,255,.14), transparent 60%),
-      radial-gradient(520px 420px at 80% 92%, rgba(255,255,255,.10), transparent 58%),
-      linear-gradient(180deg, #4c5f79 0%, #3e5068 55%, #4c5f79 100%) !important;
-    background-repeat: no-repeat !important;
+    background-image: none !important;
   }
 }
