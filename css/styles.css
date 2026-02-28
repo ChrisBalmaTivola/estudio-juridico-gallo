@@ -436,7 +436,7 @@ h2{
 }
 
 /* Responsive */
-/* Responsive + fondo más claro en mobile/tablet */
+/* Responsive + fondo mobile igual al desktop (solo más claro) */
 @media (max-width: 920px){
   .hero__inner{ grid-template-columns: 1fr; }
   .grid{ grid-template-columns: repeat(2, 1fr); }
@@ -444,15 +444,20 @@ h2{
   .kv{ grid-template-columns: 92px 1fr; }
   .nav{ display:none; }
 
+  /* ✅ mismo fondo que desktop, pero aclarado (sin volverse azul) */
+  :root{
+    --bg0: #2f3a4b;   /* antes #232c3a */
+    --bg1: #3a475b;   /* antes #2c384a */
+  }
+
+  /* opcional: un poquito más de luz en mobile */
   body{
-	  background-color: #415269 !important;
-	  background-image:
-		radial-gradient(520px 420px at 18% 12%, rgba(255,255,255,.18), transparent 62%),
-		radial-gradient(520px 420px at 82% 6%, rgba(255,255,255,.12), transparent 60%),
-		radial-gradient(520px 420px at 80% 92%, rgba(255,255,255,.08), transparent 58%),
-		linear-gradient(180deg, #415269 0%, #2f3d52 55%, #415269 100%) !important;
-	  background-repeat: no-repeat !important;
-	}
+    background:
+      radial-gradient(520px 420px at 12% 10%, rgba(191,199,212,.22), transparent 62%),
+      radial-gradient(520px 420px at 88% 0%, rgba(138,150,170,.18), transparent 60%),
+      radial-gradient(520px 420px at 86% 92%, rgba(191,199,212,.14), transparent 58%),
+      linear-gradient(180deg, var(--bg1) 0%, var(--bg0) 55%, var(--bg1) 100%);
+  }
 }
 
 
