@@ -446,7 +446,7 @@ h2{
 
   /* fondo más claro (solo el fondo) */
   body{
-    background-color: #4c5f79 !important;
+    background: #ffffff !important;
     background-image:
       radial-gradient(520px 420px at 18% 12%, rgba(255,255,255,.22), transparent 62%),
       radial-gradient(520px 420px at 82% 6%, rgba(255,255,255,.14), transparent 60%),
